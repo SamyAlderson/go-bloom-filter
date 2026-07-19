@@ -1,88 +1,68 @@
 # go-bloom-filter
+A Go implementation of a Bloom filter with counting for approximate set membership testing.
 
-A Go implementation of a Bloom filter with counting.
+## What it does
+go-bloom-filter is a simple, efficient Bloom filter with counting that allows for approximate set membership testing. I wrote it because Go's standard library doesn't have a built-in Bloom filter implementation.
 
-## What and Why
-
-A Bloom filter is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. This implementation includes a counting Bloom filter, which keeps track of the number of occurrences of each element.
-
-## Install
-
-Run `go get` to install the package:
+## Installation
+To use go-bloom-filter, run:
 ```bash
-go get github.com/samyalderson/go-bloom-filter
+go get github.com/samyalder/CS_theory/go-bloom-filter
 ```
 ## Usage
-
 ```go
 import (
 	"fmt"
-
-	"github.com/samyalderson/go-bloom-filter"
+	"github.com/samyalder/CS_theory/go-bloom-filter"
 )
 
 func main() {
-	// Create a new Bloom filter with a capacity of 100 and a hash count of 5
-	bf := bloom.New(100, 5)
-
-	// Add some elements to the filter
-	bf.Add("hello")
-	bf.Add("world")
-	bf.Add("go")
-
-	// Test whether an element is in the filter
-	if bf.Test("hello") {
-		fmt.Println("hello is in the filter")
+	bf := go_bloom_filter.New(100, 0.01)
+	bf.Add("apple")
+	bf.Add("banana")
+	if bf.Test("apple") {
+		fmt.Println("apple is probably in the set")
 	}
-
-	// Create a new counting Bloom filter with a capacity of 100 and a hash count of 5
-	cbf := count.New(100, 5)
-
-	// Add some elements to the filter
-	cbf.Add("hello")
-	cbf.Add("world")
-	cbf.Add("go")
-
-	// Get the count of an element
-	count, ok := cbf.Get("hello")
-	if ok {
-		fmt.Printf("hello has been added %d times\n", count)
+	if !bf.Test("cherry") {
+		fmt.Println("cherry is probably not in the set")
 	}
 }
 ```
-## Build from Source
-
-Run `go build` to build the package:
+## Building from source
+Run:
 ```bash
-go build main.go
+go build
 ```
-## Project Structure
-
-* `go.mod`: Go module file
-* `go.sum`: Go checksum file
-* `main.go`: Main entry point
-* `bloom.go`: Bloom filter implementation
-* `count.go`: Counting Bloom filter implementation
-* `test_bloom_test.go`: Bloom filter test suite
-* `test_count_test.go`: Counting Bloom filter test suite
-* `Makefile`: Build script
-* `README.md`: Project README
-* `.gitignore`: Git ignore file
-
-## License
-
-This project is licensed under the MIT License.
-
-## Credits
-
-This project was inspired by the `github.com/olahol/bloom-filter` package.
-
 ## Tests
-
-The package includes test coverage for the Bloom filter and counting Bloom filter implementations. Run `go test` to run the tests:
+Run:
 ```bash
 go test
 ```
-## Dependencies
+## Project structure
+* `go_bloom_filter.go`: main implementation
+* `test.go`: test suite
+* `main.go`: example usage
+* `bf.go`: Bloom filter with counting
+* `hash.go`: hash functions
+* `bits.go`: bit manipulation utilities
 
-* `github.com/stretchr/testify/assert`: Test package for Go.
+## License
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
