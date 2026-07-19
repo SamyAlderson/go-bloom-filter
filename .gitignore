@@ -1,15 +1,38 @@
-__pycache__/
-*.pyc
-.pytest_cache/
-.env
-*.egg-info/
-dist/
-build/
-.venv/
-node_modules/
-target/
-bin/
-obj/
+# Go module file
+go.mod
+# Go checksum file
+go.sum
+
+# Output files
+*.exe
 *.o
+*.elf
+*.dll
 *.so
-*.dylib/
+*.dylib
+*.a
+
+# IDE temp files
+*.swp
+*.swo
+
+# IDE specific files
+*.iml
+*.ipr
+*.iws
+
+# IDE project files
+*.idea
+*.project
+*.classpath
+*.settings
+
+# Test files
+test_bloom_test.go
+test_count_test.go
+
+# Build artifact
+go-bloom-filter
+
+# Build script
+Makefile
