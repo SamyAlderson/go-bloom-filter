@@ -1,0 +1,31 @@
+// go.sum
+
+// This file contains the checksums for the Go dependencies in go.mod.
+//
+// When go get is run, it will generate this file with the checksums of the
+// packages in go.mod. The checksums are used to verify the integrity of the
+// packages when they are fetched.
+
+// Package: github.com/stretchr/testify/assert v1.7.0 h1:0t7Z3kY6tkwKBh8ZP6cS6o2p8VofXOoBcQJf/mrKp8=
+
+// Package: golang.org/x/crypto/blake2b v0.0.0-20210130163930-8c2b6a8a2e5b h1:Qs8JQ7m5zZb3L8WcQdW4cRyL1iD7BqW7F9M3sK2t7c=
+
+// Package: golang.org/x/crypto/sha3 v0.0.0-20210130163930-8c2b6a8a2e5b h1:D9kU9yP1l3w6V8UfZPqZ5j5qY7s6J8v3jvDZnB6Qp4=
+
+// Package: golang.org/x/crypto/hkdf v0.0.0-20210130163930-8c2b6a8a2e5b h1:0jQwQh1W4K1G3u4WUg2J6z0r9w2r8Q9ZuZ2xw4y8qg=
+
+// Package: golang.org/x/crypto/poly1305 v0.0.0-20210130163930-8c2b6a8a2e5b h1:7tL4QpPv9k8P0f4F0T0lR2u6x7p4dPQ8x6e5hW0kUk=
+
+// Package: golang.org/x/crypto/curve25519 v0.0.0-20210130163930-8c2b6a8a2e5b h1:3x2yZB6b7Q3W3nKqjT6b9QyY8rjxq9wX5RZg1ZjK9E=
+
+// Package: golang.org/x/crypto/ed25519 v0.0.0-20210130163930-8c2b6a8a2e5b h1:0zKxk5y6WqX4WuQwL1mYzZ7tVJ6ZrQ8uZuL9yKzLpU=
+
+// Package: golang.org/x/crypto/ed25519/internal/edwards25519 v0.0.0-20210130163930-8c2b6a8a2e5b h1:QhYj4bQp7K4Vxuqyf9ZKQwQ2vTjW8JWgJ2z1kV4T8k=
+
+// Package: golang.org/x/crypto/internal/poly1305 v0.0.0-20210130163930-8c2b6a8a2e5b h1:6sWqf0w4Q5T3Q8Q9J9JzYq1Q8WY3Jq7JzXJ8j3zJzg=
+
+// Package: golang.org/x/crypto/internal/sha3 v0.0.0-20210130163930-8c2b6a8a2e5b h1:8ZQ3j7Y8gYk5LrQ9w6f0j6yQZw5q3ZwJzW3J8zJzQk=
+
+// Package: golang.org/x/crypto/openssl v0.0.0-20210130163930-8c2b6a8a2e5b h1:6sWqf0w4Q5T3Q8Q9J9JzYq1Q8WY3Jq7JzXJ8j3zJzg=
+
+// Package: golang.org/x/crypto/ssh v0.0.0-20210130163930-8c2b6a8a2e5b h1:6sWqf0w4Q5T3Q8Q9J9JzYq1Q8WY3Jq7JzXJ8j3zJzg=
